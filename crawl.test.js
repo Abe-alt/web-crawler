@@ -25,7 +25,7 @@ test('normalizeURL capitals', () => {
     expect(actual).toEqual(expected)
 })
 
-test('getURLsFromHTML', () => {
+test('getURLsFromHTML Absolute', () => {
     const inputHTMLBody = `
     <html>
         <body>
@@ -38,5 +38,21 @@ test('getURLsFromHTML', () => {
     const inputBaseURL = "https://aviatecho.com/"
     const actual = getURLsFromHTML(inputHTMLBody, inputBaseURL)
     const expected = ["https://aviatecho.com/"]
+    expect(actual).toEqual(expected)
+})
+
+test('getURLsFromHTML Relative', () => {
+    const inputHTMLBody = `
+    <html>
+        <body>
+            <a href="/about/">
+                aviatecho
+            </a>
+        </body>
+    </html>
+    `
+    const inputBaseURL = "https://aviatecho.com"
+    const actual = getURLsFromHTML(inputHTMLBody, inputBaseURL)
+    const expected = ["https://aviatecho.com/about/"]
     expect(actual).toEqual(expected)
 })
