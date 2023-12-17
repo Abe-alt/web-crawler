@@ -13,7 +13,7 @@ Web Crawler in JavaScript using `Node.js`! This application generates an "intern
 
 Make sure you have the following installed on your machine:
 
-- `node` : The JavaScript runtime. This will let us run the JavaScript files.
+- `node` : The JavaScript runtime. This will let us run the JavaScript files. Install `Node.js` version 18.0 or higher.
 - `npm` : The package manager. This manages dependencies, metadata, and allows to specify "scripts" to run.
 
 The `package.json` file is created during npm init, and will contain the script run that runs `main.js` using node. 
